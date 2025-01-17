@@ -1,0 +1,27 @@
+{
+    "name": "github-action-worker-container",
+    "version": "1.0.0",
+    "description": "A Self Hosted GitHub Actions Worker Node that Auto Sets up in a Docker Container",
+    "scripts": {
+        "build": "docker build -t mrdnalex/github-action-worker-container .",
+        "run": "npm run build && docker run -it --name github-action-worker-container mrdnalex/github-action-worker-container",
+        "publish": "npm run build && docker push mrdnalex/github-action-worker-container",
+        "kill": "docker kill github-action-worker-container",
+        "rm": "docker rm github-action-worker-container"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/MrDNAlex/GitHub-Action-Worker-Container.git"
+    },
+    "author": "MrDNA",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/MrDNAlex/GitHub-Action-Worker-Container/issues"
+    },
+    "homepage": "https://github.com/MrDNAlex/GitHub-Action-Worker-Container#readme",
+    "dependencies": {
+    },
+    "devDependencies": {
+    }
+  }
+  
