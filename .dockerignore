@@ -4,3 +4,4 @@ Dockerfile
 .gitattributes
 .dockerignore
 package.json
+RunGitHubWorker.sh
