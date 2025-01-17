@@ -7,7 +7,8 @@
         "run": "npm run build && docker run -it --name github-action-worker-container mrdnalex/github-action-worker-container",
         "publish": "npm run build && docker push mrdnalex/github-action-worker-container",
         "kill": "docker kill github-action-worker-container",
-        "rm": "docker rm github-action-worker-container"
+        "rm": "docker rm github-action-worker-container",
+        "prune": "docker system prune -f"
     },
     "repository": {
       "type": "git",
