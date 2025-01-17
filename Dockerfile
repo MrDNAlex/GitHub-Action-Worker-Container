@@ -7,7 +7,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN useradd -ms /bin/bash GitWorker
 
 # Install dependencies and Auto Configure Timezone
-RUN apt-get update && apt-get install -y curl tar git bash tzdata nano && \
+RUN apt-get update && apt-get install -y curl tar bash tzdata && \
 ln -fs /usr/share/zoneinfo/Etc/UTC /etc/localtime && \
 dpkg-reconfigure -f noninteractive tzdata
 
