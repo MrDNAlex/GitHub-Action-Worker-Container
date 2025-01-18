@@ -5,7 +5,7 @@
 #
 
 # Github Repo Link
-Repo = "https://github.com/..."
+Repo="https://github.com/..."
 
 # Github Token
 Token="****"
