@@ -3,11 +3,18 @@ FROM ubuntu:20.04
 ENV WORKERVERSION="2.321.0"
 ENV DEBIAN_FRONTEND=noninteractive
 
+ENV REPO="https://github.com/MrDNAlex/GitHub-Action-Worker-Container"
+ENV TOKEN="AWKG34L7W7TL2IQRJDS4YALHRM2JC"
+ENV RUNNERGROUP=""
+ENV RUNNERNAME="GitHubActionWorker"
+ENV RUNNERLABELS=""
+ENV RUNNERWORKDIR="Work"
+
 # Add a new GitWorker User
 RUN useradd -ms /bin/bash GitWorker
 
 # Install dependencies and Auto Configure Timezone
-RUN apt-get update && apt-get install -y curl tar bash tzdata && \
+RUN apt-get update && apt-get install -y curl tar bash tzdata expect && \
 ln -fs /usr/share/zoneinfo/Etc/UTC /etc/localtime && \
 dpkg-reconfigure -f noninteractive tzdata
 
